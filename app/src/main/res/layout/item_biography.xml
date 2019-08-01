@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="biography"
+            type="com.peerpongsam.profile.model.Biography" />
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        android:paddingTop="16dp">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:layout_width="128dp"
+            android:layout_height="128dp"
+            android:layout_gravity="center_horizontal"
+            app:imageUrl="@{biography.avatar}"
+            tools:src="@tools:sample/avatars" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:text="@{biography.firstName + ` ` + biography.lastName}"
+            android:textAppearance="?textAppearanceHeadline6"
+            tools:text="@tools:sample/full_names" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@{biography.application}"
+            android:textColor="?android:attr/textColorSecondary"
+            tools:text="\Android Developer" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="8dp"
+            android:drawablePadding="8dp"
+            android:drawableStart="@drawable/ic_email"
+            android:drawableTint="?colorSecondary"
+            android:text="@{biography.email}"
+            tools:ignore="UnusedAttribute"
+            tools:text="peerapong.sam@gmail.com" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="8dp"
+            android:drawablePadding="8dp"
+            android:drawableStart="@drawable/ic_phone"
+            android:drawableTint="?colorSecondary"
+            android:text="@{biography.phone}"
+            tools:ignore="UnusedAttribute"
+            tools:text="+668-5610-2461" />
+
+    </LinearLayout>
+</layout>

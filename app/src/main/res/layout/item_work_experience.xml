@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="experience"
+            type="com.peerpongsam.profile.model.Experience" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/time"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:textAppearance="?textAppearanceBody2"
+            android:textColor="?colorAccent"
+            app:layout_constraintEnd_toStartOf="@+id/position"
+            app:layout_constraintHorizontal_weight="2"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:endTime="@{experience.end}"
+            app:startTime="@{experience.start}"
+            tools:text="April 2016 - Present" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/position"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:text="@{experience.position}"
+            android:textAppearance="?textAppearanceBody2"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_weight="6"
+            app:layout_constraintStart_toEndOf="@+id/time"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="Android Developer" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/company"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@{experience.company + `, ` + experience.location}"
+            app:layout_constraintBottom_toTopOf="@+id/responsibility"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/position"
+            app:layout_constraintTop_toBottomOf="@+id/position"
+            tools:text="Internet Marketing Co., Ltd." />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/responsibility"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@{experience.responsibilities}"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/position"
+            app:layout_constraintTop_toBottomOf="@+id/company"
+            tools:text="Create Android app for pantip.com" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>
