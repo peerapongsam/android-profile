@@ -1,11 +1,10 @@
 <resources>
     <string name="app_name">Profile</string>
-
     <string name="biography_first_name">Peerapong</string>
     <string name="present">Present</string>
-    <string name="heading_work_experience">Work Experience</string>
+    <string name="heading_work_experience">Experience</string>
     <string name="heading_education">Education</string>
-    <string name="heading_personal_info">Personal Info</string>
+    <string name="heading_personal_info">About Me</string>
     <string name="heading_interests">Interests</string>
     <string name="heading_social">Social</string>
 </resources>

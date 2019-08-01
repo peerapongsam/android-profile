@@ -4,10 +4,7 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.ListAdapter
 import com.peerpongsam.profile.R
-import com.peerpongsam.profile.model.Biography
-import com.peerpongsam.profile.model.Education
-import com.peerpongsam.profile.model.Experience
-import com.peerpongsam.profile.model.Heading
+import com.peerpongsam.profile.model.*
 
 class ProfileAdapter : ListAdapter<Any, ProfileViewHolder>(object : DiffUtil.ItemCallback<Any?>() {
     override fun areItemsTheSame(oldItem: Any, newItem: Any): Boolean {
@@ -32,6 +29,7 @@ class ProfileAdapter : ListAdapter<Any, ProfileViewHolder>(object : DiffUtil.Ite
             is Education -> R.layout.item_education
             is Experience -> R.layout.item_work_experience
             is Heading -> R.layout.item_heading
+            is SocialNetwork -> R.layout.item_social
             else -> super.getItemViewType(position)
         }
     }

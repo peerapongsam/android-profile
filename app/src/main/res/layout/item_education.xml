@@ -13,22 +13,22 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:paddingBottom="8dp"
-        android:paddingEnd="16dp"
-        android:paddingStart="16dp"
-        android:paddingTop="8dp">
+        android:paddingStart="8dp"
+        android:paddingTop="8dp"
+        android:paddingEnd="8dp"
+        android:paddingBottom="8dp">
 
         <androidx.appcompat.widget.AppCompatTextView
             android:id="@+id/time"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:gravity="start"
+            android:gravity="end"
             android:text="@{education.graduated}"
-            android:textAppearance="?textAppearanceBody1"
+            android:textAppearance="?textAppearanceBody2"
             android:textColor="?colorAccent"
-            app:layout_constraintEnd_toStartOf="@+id/degree"
+            app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_weight="2"
-            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/degree"
             app:layout_constraintTop_toTopOf="parent"
             tools:text="2011" />
 
@@ -38,10 +38,12 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
             android:text="@{education.degree}"
-            android:textAppearance="?textAppearanceBody2"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_weight="6"
-            app:layout_constraintStart_toEndOf="@+id/time"
+            android:textAllCaps="true"
+            android:textAppearance="?textAppearanceBody1"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toStartOf="@+id/time"
+            app:layout_constraintHorizontal_weight="8"
+            app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             tools:text="Bachelor of Science (Information Technology)" />
 
@@ -49,6 +51,7 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:text="@{education.school}"
+            android:textAppearance="?textAppearanceCaption"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="@+id/degree"
             app:layout_constraintStart_toStartOf="@+id/degree"

@@ -20,15 +20,15 @@ object DataBindingAdapters {
     @BindingAdapter("imageUrl")
     fun setImageUrl(view: ImageView, url: String) {
         Glide.with(view)
-            .load(url)
-            .circleCrop()
-            .into(view)
+                .load(url)
+                .circleCrop()
+                .into(view)
     }
 
     @JvmStatic
     @BindingAdapter("startTime", "endTime")
     fun setDateTime(view: TextView, start: Long, end: Long) {
-        val format = SimpleDateFormat("MMM yyyy", Locale.getDefault())
+        val format = SimpleDateFormat("yyyy", Locale.getDefault())
         val builder = SpannableStringBuilder()
         builder.append(format.format(Date(start)))
         builder.append(" - ")
@@ -56,7 +56,7 @@ object DataBindingAdapters {
         setIntrinsicBounds(drawable)
         val drawablesRelative = view.compoundDrawablesRelative
         view.setCompoundDrawablesRelative(
-            drawable, drawablesRelative[1], drawablesRelative[2], drawablesRelative[3]
+                drawable, drawablesRelative[1], drawablesRelative[2], drawablesRelative[3]
         )
     }
 

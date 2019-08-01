@@ -12,13 +12,13 @@
     <androidx.appcompat.widget.AppCompatTextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:drawablePadding="16dp"
         android:drawableStart="@{heading.icon}"
+        android:drawablePadding="16dp"
         android:drawableTint="?colorAccent"
         android:padding="16dp"
         android:text="@{heading.title}"
         android:textAllCaps="true"
-        android:textAppearance="?textAppearanceHeadline5"
+        android:textAppearance="?textAppearanceHeadline6"
         tools:drawableStart="@drawable/ic_education"
         tools:ignore="UnusedAttribute"
         tools:text="Experience">

@@ -14,21 +14,25 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        android:padding="16dp">
+        android:paddingStart="8dp"
+        android:paddingTop="8dp"
+        android:paddingEnd="8dp"
+        android:paddingBottom="8dp">
 
         <androidx.appcompat.widget.AppCompatTextView
             android:id="@+id/time"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
+            android:gravity="end"
             android:textAppearance="?textAppearanceBody2"
             android:textColor="?colorAccent"
-            app:layout_constraintEnd_toStartOf="@+id/position"
-            app:layout_constraintHorizontal_weight="2"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
             app:endTime="@{experience.end}"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_weight="3"
+            app:layout_constraintStart_toEndOf="@+id/position"
+            app:layout_constraintTop_toTopOf="parent"
             app:startTime="@{experience.start}"
-            tools:text="April 2016 - Present" />
+            tools:text="2016 - Present" />
 
         <androidx.appcompat.widget.AppCompatTextView
             android:id="@+id/position"
@@ -36,10 +40,12 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
             android:text="@{experience.position}"
-            android:textAppearance="?textAppearanceBody2"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_weight="6"
-            app:layout_constraintStart_toEndOf="@+id/time"
+            android:textAllCaps="true"
+            android:textAppearance="?textAppearanceBody1"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toStartOf="@+id/time"
+            app:layout_constraintHorizontal_weight="7"
+            app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             tools:text="Android Developer" />
 
@@ -48,6 +54,7 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:text="@{experience.company + `, ` + experience.location}"
+            android:textAppearance="?textAppearanceCaption"
             app:layout_constraintBottom_toTopOf="@+id/responsibility"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="@+id/position"
