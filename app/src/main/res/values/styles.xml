@@ -9,6 +9,7 @@
         <item name="colorSecondary">@color/colorAccent</item>
         <item name="android:fontFamily">@font/prompt</item>
         <item name="android:textColorPrimary">#2D4767</item>
+        <item name="android:textColorSecondary">#D62D4767</item>
     </style>
 
     <style name="AppTheme.NoActionBar">

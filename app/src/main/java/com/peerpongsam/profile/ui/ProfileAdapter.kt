@@ -26,10 +26,11 @@ class ProfileAdapter : ListAdapter<Any, ProfileViewHolder>(object : DiffUtil.Ite
     override fun getItemViewType(position: Int): Int {
         return when (getItem(position)) {
             is Biography -> R.layout.item_biography
+            is AboutMe -> R.layout.item_about_me
             is Education -> R.layout.item_education
             is Experience -> R.layout.item_work_experience
             is Heading -> R.layout.item_heading
-            is SocialNetwork -> R.layout.item_social
+            is Site -> R.layout.item_site
             else -> super.getItemViewType(position)
         }
     }

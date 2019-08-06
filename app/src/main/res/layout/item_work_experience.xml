@@ -14,10 +14,10 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        android:paddingStart="8dp"
-        android:paddingTop="8dp"
-        android:paddingEnd="8dp"
-        android:paddingBottom="8dp">
+        android:paddingBottom="8dp"
+        android:paddingEnd="16dp"
+        android:paddingStart="16dp"
+        android:paddingTop="8dp">
 
         <androidx.appcompat.widget.AppCompatTextView
             android:id="@+id/time"
@@ -26,11 +26,11 @@
             android:gravity="end"
             android:textAppearance="?textAppearanceBody2"
             android:textColor="?colorAccent"
-            app:endTime="@{experience.end}"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_weight="3"
             app:layout_constraintStart_toEndOf="@+id/position"
             app:layout_constraintTop_toTopOf="parent"
+            app:endTime="@{experience.end}"
             app:startTime="@{experience.start}"
             tools:text="2016 - Present" />
 
@@ -38,10 +38,9 @@
             android:id="@+id/position"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_marginStart="16dp"
             android:text="@{experience.position}"
             android:textAllCaps="true"
-            android:textAppearance="?textAppearanceBody1"
+            android:textAppearance="?textAppearanceSubtitle1"
             android:textStyle="bold"
             app:layout_constraintEnd_toStartOf="@+id/time"
             app:layout_constraintHorizontal_weight="7"
@@ -53,6 +52,7 @@
             android:id="@+id/company"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
+            android:paddingTop="8dp"
             android:text="@{experience.company + `, ` + experience.location}"
             android:textAppearance="?textAppearanceCaption"
             app:layout_constraintBottom_toTopOf="@+id/responsibility"
@@ -65,7 +65,9 @@
             android:id="@+id/responsibility"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
+            android:paddingTop="8dp"
             android:text="@{experience.responsibilities}"
+            android:textAppearance="?textAppearanceBody1"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="@+id/position"

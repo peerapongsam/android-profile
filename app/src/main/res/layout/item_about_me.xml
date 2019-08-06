@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="about"
+            type="com.peerpongsam.profile.model.AboutMe" />
+    </data>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="8dp"
+        android:paddingEnd="16dp"
+        android:paddingStart="16dp"
+        android:paddingTop="8dp"
+        android:text="@{about.desc}"
+        android:textAppearance="?textAppearanceBody1"
+        tools:text="@tools:sample/lorem/random">
+
+    </androidx.appcompat.widget.AppCompatTextView>
+</layout>
